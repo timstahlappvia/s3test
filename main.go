@@ -30,6 +30,7 @@ func main() {
 		exitErrorf("Unable to list buckets, %v", err)
 	}
 
+	fmt.Println("*** Appvia S3 Bucket List Generator ***")
 	fmt.Println("Buckets:")
 
 	for _, b := range result.Buckets {
