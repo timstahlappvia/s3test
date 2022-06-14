@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: aws-storage-controller
+spec:
+  template:
+    spec:
+      containers:
+      - name: aws-storage-controller
+        image: tstahlfsu/aws-s3-controller:latest
+        imagePullPolicy: "Always"
+        env:
+      restartPolicy: Never
+  backoffLimit: 2
